@@ -203,6 +203,32 @@ body {
     border-right: 10px solid #ffffff;
 }
 
+/* モバイル用の吹き出し（上向き） */
+@media (max-width: 767px) {
+    .problem-item {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .problem-item::before {
+        left: 20px;
+        top: -12px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 12px solid #fe891f;
+        border-top: none;
+    }
+    
+    .problem-item::after {
+        left: 22px;
+        top: -10px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 10px solid #ffffff;
+        border-top: none;
+    }
+}
+
 .problem-text {
     color: #2c2c2c;
     font-size: 15px;
