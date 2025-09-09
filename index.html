@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+            .classroom-images {
+                grid-template-columns: repeat(2, 1fr);
+            }<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -12,13 +14,76 @@
         }
 
         body {
-            font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', 'MS PMincho', 'MS 明朝', serif;
+            font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Yu Gothic', 'メイリオ', sans-serif;
             line-height: 1.6;
             color: #2c2c2c;
             background: #ffffff;
         }
 
+        /* ヘッダー */
+        .header {
+            background: #ffffff;
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(28, 22, 105, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1c1669;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 14px;
+        }
+
+        .phone {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fe891f;
+            text-decoration: none;
+        }
+
+        .hours {
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .nav {
+            width: 100%;
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .nav a {
+            color: #1c1669;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover, .nav a.cta {
+            background: #fe891f;
+            color: #ffffff;
+        }
 
         /* セクション共通 */
         .section {
@@ -93,84 +158,25 @@
             background: #f8f9fa;
         }
 
-        .problems-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            margin-top: 40px;
-            flex-direction: column;
-        }
-
-        .mother-image-section {
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .mother-image-placeholder {
-            width: 250px;
-            height: 300px;
-            background: #ffffff;
-            border: 2px dashed #6c757d;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6c757d;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .mother-caption {
-            font-size: 14px;
-            color: #6c757d;
-            font-style: italic;
-        }
-
         .problems-list {
             display: grid;
             gap: 20px;
-            flex: 1;
+            margin-top: 30px;
         }
 
         .problem-item {
             background: #ffffff;
-            padding: 20px 25px;
-            border-radius: 20px;
-            border: 2px solid #fe891f;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            position: relative;
-            margin-left: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #fe891f;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .problem-item::before {
-            content: "";
-            position: absolute;
-            left: -12px;
-            top: 20px;
-            width: 0;
-            height: 0;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-right: 12px solid #fe891f;
-        }
-
-        .problem-item::after {
-            content: "";
-            position: absolute;
-            left: -10px;
-            top: 22px;
-            width: 0;
-            height: 0;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
-            border-right: 10px solid #ffffff;
-        }
-
-        .problem-text {
-            color: #2c2c2c;
-            font-size: 15px;
-            line-height: 1.6;
-            margin: 0;
+            content: "✓";
+            color: #fe891f;
+            font-weight: bold;
+            margin-right: 10px;
         }
 
         /* 解決提案セクション */
@@ -420,36 +426,31 @@
             border-radius: 15px;
             margin-bottom: 30px;
             border-left: 4px solid #fe891f;
-            text-align: center;
         }
 
         .review-title {
             font-size: 18px;
             font-weight: bold;
             color: #1c1669;
-            margin-bottom: 15px;
-            line-height: 1.4;
+            margin-bottom: 10px;
         }
 
         .review-author {
             font-size: 14px;
             color: #6c757d;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .review-image-placeholder {
+        .review-content-placeholder {
             width: 100%;
-            max-width: 300px;
-            height: 200px;
+            height: 100px;
             background: #ffffff;
             border: 2px dashed #6c757d;
-            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #6c757d;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 5px;
         }
 
         /* 授業料 */
@@ -483,56 +484,29 @@
             line-height: 1.7;
         }
 
-        .included-services {
+        .value-list {
+            display: grid;
+            gap: 30px;
             margin-top: 40px;
         }
 
-        .service-grid {
-            display: grid;
-            gap: 25px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .service-item {
+        .value-item {
             background: #ffffff;
             padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(28, 22, 105, 0.08);
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            border-left: 4px solid #fe891f;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .service-item:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(28, 22, 105, 0.12);
-        }
-
-        .service-icon {
-            font-size: 16px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #fe891f, #ff9533);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            color: #ffffff;
+        .value-title {
+            font-size: 18px;
             font-weight: bold;
-        }
-
-        .service-text {
-            color: #2c2c2c;
-            line-height: 1.6;
-        }
-
-        .service-text strong {
             color: #1c1669;
-            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .value-description {
+            color: #2c2c2c;
+            line-height: 1.7;
         }
 
         /* FAQ */
@@ -542,10 +516,9 @@
 
         .faq-item {
             background: #f8f9fa;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border-radius: 10px;
             overflow: hidden;
-            border: 1px solid #e9ecef;
         }
 
         .faq-question {
@@ -554,39 +527,12 @@
             padding: 20px;
             font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-question:hover {
-            background: #2a1f7a;
-        }
-
-        .faq-question::after {
-            content: "+";
-            font-size: 24px;
-            font-weight: bold;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-question.active::after {
-            transform: rotate(45deg);
         }
 
         .faq-answer {
-            padding: 0 20px;
+            padding: 20px;
             color: #2c2c2c;
             line-height: 1.7;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-
-        .faq-answer.active {
-            padding: 20px;
-            max-height: 200px;
         }
 
         /* 教室案内 */
@@ -617,30 +563,12 @@
             color: #2c2c2c;
         }
 
-        .classroom-images {
-            display: grid;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .classroom-image-placeholder {
-            width: 100%;
-            height: 250px;
-            background: #f8f9fa;
-            border: 2px dashed #6c757d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #6c757d;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
         .map-placeholder {
             width: 100%;
             height: 300px;
             background: #f8f9fa;
             border: 2px dashed #6c757d;
+            margin-top: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -726,6 +654,15 @@
 
         /* レスポンシブデザイン */
         @media (min-width: 768px) {
+            .header-content {
+                flex-wrap: nowrap;
+            }
+
+            .nav {
+                width: auto;
+                margin-top: 0;
+            }
+
             .main-catchcopy {
                 font-size: 42px;
             }
@@ -740,16 +677,6 @@
 
             .problems-list {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .problems-container {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-
-            .mother-image-placeholder {
-                width: 200px;
-                height: 250px;
             }
 
             .strengths-grid {
@@ -773,24 +700,33 @@
             }
         }
 
-        @media (min-width: 1024px) {
-            .problems-list {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .strengths-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
     </style>
 </head>
 <body>
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">トモエMIアカデミー</div>
+            <div class="contact-info">
+                <a href="tel:03-5269-8181" class="phone">03-5269-8181</a>
+                <div class="hours">平日10:00〜17:00</div>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#strengths">4つの強み</a>
+            <a href="#director">所長メッセージ</a>
+            <a href="#reviews">保護者の声</a>
+            <a href="#faq">よくある質問</a>
+            <a href="#contact" class="cta">無料体験予約</a>
+        </nav>
+    </header>
+
     <!-- ヒーローセクション -->
     <section class="hero">
         <div class="hero-content">
             <h1 class="main-catchcopy">長い歴史から生まれた、<br>"学びのそろばん"</h1>
             <p class="sub-catchcopy">子どもの「好き」が育つ、やさしいそろばん教室</p>
-            <div class="hero-image-placeholder">メインビジュアル</div>
+            <div class="hero-image-placeholder">メインビジュアル画像</div>
             <a href="#contact" class="cta-button">まずは無料で体験してみる</a>
         </div>
     </section>
@@ -799,31 +735,14 @@
     <section class="section problems">
         <div class="container">
             <h2 class="section-title">こんなお子さまの姿に心当たりはありませんか？</h2>
-            <div class="problems-container">
-                <div class="mother-image-section">
-                    <div class="mother-image-placeholder">お母さんの写真</div>
-                    <p class="mother-caption">お子様の将来を想うお母様</p>
-                </div>
-                <div class="problems-list">
-                    <div class="problem-item">
-                        <p class="problem-text">そろばんを習わせたいけれど、いい教室が見つからない</p>
-                    </div>
-                    <div class="problem-item">
-                        <p class="problem-text">数字が苦手で、将来の算数や数学についていけるか不安</p>
-                    </div>
-                    <div class="problem-item">
-                        <p class="problem-text">集団での習い事では質問しづらく、個別指導や少人数の教室を探している</p>
-                    </div>
-                    <div class="problem-item">
-                        <p class="problem-text">習い事に興味を示すものの、すぐに「つまらない」と続かない</p>
-                    </div>
-                    <div class="problem-item">
-                        <p class="problem-text">学校の勉強で「わからない」が増え、自信をなくしている</p>
-                    </div>
-                    <div class="problem-item">
-                        <p class="problem-text">子供が胸を張って「得意」と言えるものを一緒に見つけたい</p>
-                    </div>
-                </div>
+            <div class="problems-list">
+                <div class="problem-item">そろばんを習わせたいけれど、いい教室が見つからない</div>
+                <div class="problem-item">数字が苦手で、将来の算数や数学についていけるか不安</div>
+                <div class="problem-item">習い事に興味を示すものの、すぐに「つまらない」と続かない</div>
+                <div class="problem-item">学校の勉強で「わからない」が増え、自信をなくしている</div>
+                <div class="problem-item">スマホやゲームには集中できるのに、勉強になると落ち着きがない</div>
+                <div class="problem-item">集団での習い事では質問しづらく、個別指導を希望している</div>
+                <div class="problem-item">子供が胸を張って「得意」と言えるものを一緒に見つけたい</div>
             </div>
         </div>
     </section>
@@ -832,6 +751,7 @@
     <section class="section solution">
         <div class="container">
             <h2 class="section-title">そんなお悩みは、トモエMIアカデミーにお任せください</h2>
+            <div class="solution-image-placeholder">解決イメージ画像</div>
         </div>
     </section>
 
@@ -842,7 +762,7 @@
             <div class="strengths-grid">
                 <div class="strength-item">
                     <div class="strength-number">1</div>
-                    <div class="strength-image-placeholder"><img src="tomoemiacademy/_0023.JPG" alt=""></div>
+                    <div class="strength-image-placeholder">そろばん歴史画像</div>
                     <h3 class="strength-title">トモエそろばんの歴史と楽しさ</h3>
                     <p class="strength-subtitle">長年培われた技術から生まれる、学びの喜び</p>
                     <p class="strength-description">そろばん製造の長い経験から生まれた独自の指導法で、「楽しい」「もっとやりたい」という気持ちを大切にします。数字が苦手なお子さまでも安心して始められる段階的なカリキュラムを提供しています。</p>
@@ -856,14 +776,14 @@
                 </div>
                 <div class="strength-item">
                     <div class="strength-number">3</div>
-                    <div class="strength-image-placeholder"><img src="_0026.JPG" alt=""></div>
+                    <div class="strength-image-placeholder">個別指導画像</div>
                     <h3 class="strength-title">完全個別指導</h3>
                     <p class="strength-subtitle">講師一名に対して生徒一名の贅沢な学習環境</p>
                     <p class="strength-description">お子さまのペースに合わせたオーダーメイド指導で、「わからない」を残さず、確実に理解できるまでサポート。集団授業では得られない、きめ細かな指導を提供します。</p>
                 </div>
                 <div class="strength-item">
                     <div class="strength-number">4</div>
-                    <div class="strength-image-placeholder"><img src="_0421.JPG" alt=""></div>
+                    <div class="strength-image-placeholder">英語学習画像</div>
                     <h3 class="strength-title">英語を使った数字学習</h3>
                     <p class="strength-subtitle">グローバル教育への第一歩</p>
                     <p class="strength-description">英語を使って数字を学ぶことで、自然に耳が英語に慣れ、将来の留学やインターナショナルスクールを検討されているご家庭にとって、理想的な準備教育となります。</p>
@@ -879,6 +799,12 @@
                 
                 <div class="cta-description">
                     30分間マンツーマンでの体験レッスンとなります。お子様の年齢や個性、成長度合いによって授業の内容は変わってまいります。体験授業の後、保護者様と面談させていただき、当アカデミーの教育方針や指導方法についてご説明いたします。
+                </div>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">24時間予約受付</div>
+                    <div class="benefit-item">お子様専用カリキュラム</div>
+                    <div class="benefit-item">優しい先生が担当</div>
                 </div>
                 
                 <a href="#contact" class="cta-button">まずは無料で体験してみる</a>
@@ -910,7 +836,7 @@
             
             <div class="director-message">
                 <div class="director-info">
-                    <div class="director-image-placeholder"><img src="tomoe.jpg" alt=""></div>
+                    <div class="director-image-placeholder">所長写真</div>
                     <div class="director-name">トモエMIアカデミー所長 藤本トモエ</div>
                 </div>
                 <div class="director-text">
@@ -958,48 +884,32 @@
             
             <div class="price-box">
                 <div class="price">月額 25,000円</div>
-                <div class="price-frequency">毎週1回、60分のレッスン</div>
+                <div class="price-frequency">毎週1回の完全個別指導</div>
+                <p class="price-description">
+                    他の塾と比べると若干高額ですが、その理由には確かな根拠があります。<br>
+                    トモエMIアカデミーが提供する価値をご理解ください。
+                </p>
             </div>
             
-            <div class="included-services">
-                <div class="service-grid">
-                    <div class="service-item">
-                        <div class="service-icon">1:1</div>
-                        <div class="service-text">
-                            <strong>完全個別指導</strong><br>
-                            （講師1対生徒1）
-                        </div>
-                    </div>
-                    
-                    <div class="service-item">
-                        <div class="service-icon">振替</div>
-                        <div class="service-text">
-                            <strong>当日振替対応</strong><br>
-                            （追加料金なし）
-                        </div>
-                    </div>
-                    
-                    <div class="service-item">
-                        <div class="service-icon">時間</div>
-                        <div class="service-text">
-                            <strong>柔軟な時間設定</strong><br>
-                            （平日10-17時、土曜応相談）
-                        </div>
-                    </div>
-                    
-                    <div class="service-item">
-                        <div class="service-icon">相談</div>
-                        <div class="service-text">
-                            <strong>保護者様への<br>学習サポートアドバイス</strong>
-                        </div>
-                    </div>
-                    
-                    <div class="service-item">
-                        <div class="service-icon">教材</div>
-                        <div class="service-text">
-                            <strong>教材費すべて込み</strong>
-                        </div>
-                    </div>
+            <div class="value-list">
+                <div class="value-item">
+                    <h3 class="value-title">1. 完全個別指導の価値</h3>
+                    <p class="value-description">講師1名に対して生徒1名の贅沢な環境で、お子さまのペースに完全に合わせた指導を行います。集団授業では不可能な、きめ細かなサポートを提供しています。</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3 class="value-title">2. ハーバード式MI理論の専門指導</h3>
+                    <p class="value-description">所長が直接ハーバード大学で学んだMI理論を用いて、お子さま一人ひとりの個性を科学的に分析し、最適な学習アプローチを提供します。</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3 class="value-title">3. 保護者様への継続的なサポート</h3>
+                    <p class="value-description">お子さまの指導だけでなく、保護者様のご相談にもいつでも対応いたします。子育ての悩みや家庭での学習サポートについても、専門的なアドバイスを提供しています。</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3 class="value-title">4. 長い歴史に培われた独自メソッド</h3>
+                    <p class="value-description">そろばん製造の長い経験から生まれた独自の指導法で、「楽しい」から始まる学習体験を提供。数字が苦手なお子さまも確実に成長できるカリキュラムです。</p>
                 </div>
             </div>
 
@@ -1012,6 +922,12 @@
                 
                 <div class="cta-description">
                     30分間マンツーマンでの体験レッスンとなります。お子様の年齢や個性、成長度合いによって授業の内容は変わってまいります。体験授業の後、保護者様と面談させていただき、当アカデミーの教育方針や指導方法についてご説明いたします。
+                </div>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">24時間予約受付</div>
+                    <div class="benefit-item">お子様専用カリキュラム</div>
+                    <div class="benefit-item">優しい先生が担当</div>
                 </div>
                 
                 <a href="#contact" class="cta-button">まずは無料で体験してみる</a>
@@ -1104,10 +1020,7 @@
                 </div>
             </div>
             
-            <div class="classroom-images">
-                <div class="classroom-image-placeholder"><img src="_0010.jpg" alt=""></div>
-                <div class="map-placeholder"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6481.291141542882!2d139.72371877588307!3d35.685728172585854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c8c7b161db9%3A0xf8e244c362092621!2z44OI44Oi44KoTUnjgqLjgqvjg4fjg5_jg7w!5e0!3m2!1sja!2sjp!4v1756164323911!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-            </div>
+            <div class="map-placeholder">Google マップ</div>
         </div>
     </section>
 
