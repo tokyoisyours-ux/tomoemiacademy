@@ -595,6 +595,10 @@ body {
     background: #f8f9fa;
 }
 
+.faq .container {
+    max-width: 800px;
+}
+
 .faq-item {
     background: #ffffff;
     margin-bottom: 15px;
