@@ -4,6 +4,16 @@
         padding: 40px 15px;
     }
     
+    .problems-container {
+        align-items: center;
+    }
+    
+    .mother-image-section {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
     .cta-section {
         width: calc(100% - 30px);
         padding: 30px 15px;
