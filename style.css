@@ -8,7 +8,7 @@ body {
     font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', 'MS PMincho', 'MS 明朝', serif;
     line-height: 1.6;
     color: #2c2c2c;
-    background: #ffffff;
+    background: #f8f9fa;
 }
 
 /* セクション共通 */
@@ -38,9 +38,9 @@ body {
     font-weight: 600;
 }
 
-/* ヒーローセクション */
+/* ヒーローセクション - 白背景 */
 .hero {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: #ffffff;
     padding: 60px 20px;
     text-align: center;
 }
@@ -67,19 +67,24 @@ body {
 
 .hero-image-placeholder {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: 300px;
-    background: #f8f9fa;
-    border: 2px dashed #6c757d;
     margin: 30px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* 悩みセクション */
+/* 悩みセクション - ライトグレー背景 */
 .problems {
     background: #f8f9fa;
 }
@@ -100,15 +105,20 @@ body {
 .mother-image-placeholder {
     width: 250px;
     height: 300px;
-    background: #ffffff;
-    border: 2px dashed #6c757d;
     margin: 0 auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.mother-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
 .mother-caption {
@@ -164,20 +174,20 @@ body {
     margin: 0;
 }
 
-/* 解決提案セクション */
+/* 解決提案セクション - 白背景 */
 .solution {
-    background: #1c1669;
-    color: #ffffff;
+    background: #ffffff;
+    color: #2c2c2c;
     text-align: center;
 }
 
 .solution .section-title {
-    color: #ffffff;
+    color: #1c1669;
 }
 
-/* 4つの強み */
+/* 4つの強み - ライトグレー背景 */
 .strengths {
-    background: #ffffff;
+    background: #f8f9fa;
 }
 
 .strengths-grid {
@@ -227,13 +237,18 @@ body {
     width: 100%;
     max-width: 300px;
     height: 200px;
-    background: #f8f9fa;
-    border: 2px dashed #6c757d;
     margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.strength-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -245,9 +260,10 @@ body {
     text-align: center;
     padding: 50px 30px;
     border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(28, 22, 105, 0.1);
-    border: 2px solid #f8f9fa;
+    box-shadow: 0 12px 40px rgba(28, 22, 105, 0.15);
+    border: 2px solid #e9ecef;
     margin: 40px auto;
+    position: relative;
 }
 
 .cta-header {
@@ -335,9 +351,9 @@ body {
     line-height: 1.6;
 }
 
-/* 歴史と信頼 */
+/* 歴史と信頼 - 白背景 */
 .history {
-    background: #f8f9fa;
+    background: #ffffff;
 }
 
 .history-message {
@@ -349,7 +365,7 @@ body {
 }
 
 .director-message {
-    background: #ffffff;
+    background: #f8f9fa;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -363,14 +379,19 @@ body {
 .director-image-placeholder {
     width: 150px;
     height: 150px;
-    background: #f8f9fa;
-    border: 2px dashed #6c757d;
     margin: 0 auto 20px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
+    overflow: hidden;
+}
+
+.director-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .director-name {
@@ -384,18 +405,19 @@ body {
     color: #2c2c2c;
 }
 
-/* 保護者の声 */
+/* 保護者の声 - ライトグレー背景 */
 .reviews {
-    background: #ffffff;
+    background: #f8f9fa;
 }
 
 .review-item {
-    background: #f8f9fa;
+    background: #ffffff;
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 30px;
     border-left: 4px solid #fe891f;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .review-title {
@@ -416,24 +438,29 @@ body {
     width: 100%;
     max-width: 300px;
     height: 200px;
-    background: #ffffff;
-    border: 2px dashed #6c757d;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
 }
 
-/* 授業料 */
+.review-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 授業料 - 白背景 */
 .pricing {
-    background: #f8f9fa;
+    background: #ffffff;
 }
 
 .price-box {
-    background: #ffffff;
+    background: #f8f9fa;
     padding: 40px;
     border-radius: 15px;
     text-align: center;
@@ -453,11 +480,6 @@ body {
     margin-bottom: 20px;
 }
 
-.price-description {
-    color: #2c2c2c;
-    line-height: 1.7;
-}
-
 .included-services {
     margin-top: 40px;
 }
@@ -470,7 +492,7 @@ body {
 }
 
 .service-item {
-    background: #ffffff;
+    background: #f8f9fa;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(28, 22, 105, 0.08);
@@ -510,17 +532,18 @@ body {
     font-size: 16px;
 }
 
-/* FAQ */
+/* FAQ - ライトグレー背景 */
 .faq {
-    background: #ffffff;
+    background: #f8f9fa;
 }
 
 .faq-item {
-    background: #f8f9fa;
+    background: #ffffff;
     margin-bottom: 15px;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid #e9ecef;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .faq-question {
@@ -564,9 +587,9 @@ body {
     max-height: 200px;
 }
 
-/* 教室案内 */
+/* 教室案内 - 白背景 */
 .classroom-info {
-    background: #f8f9fa;
+    background: #ffffff;
 }
 
 .info-grid {
@@ -576,7 +599,7 @@ body {
 }
 
 .info-item {
-    background: #ffffff;
+    background: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
@@ -601,40 +624,51 @@ body {
 .classroom-image-placeholder {
     width: 100%;
     height: 250px;
-    background: #f8f9fa;
-    border: 2px dashed #6c757d;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.classroom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .map-placeholder {
     width: 100%;
     height: 300px;
-    background: #f8f9fa;
-    border: 2px dashed #6c757d;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6c757d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* 申し込みフォーム */
+/* 申し込みフォーム - ライトグレー背景 */
 .contact-form {
-    background: #ffffff;
+    background: #f8f9fa;
 }
 
 .form-message {
     text-align: center;
     margin-bottom: 40px;
     padding: 30px;
-    background: #f8f9fa;
+    background: #ffffff;
     border-radius: 15px;
     line-height: 1.8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .form-grid {
@@ -660,6 +694,7 @@ body {
     border-radius: 8px;
     font-size: 16px;
     transition: border-color 0.3s ease;
+    background: #ffffff;
 }
 
 .form-input:focus, .form-textarea:focus {
@@ -695,8 +730,9 @@ body {
     text-align: center;
     margin-top: 40px;
     padding: 30px;
-    background: #f8f9fa;
+    background: #ffffff;
     border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 /* レスポンシブデザイン */
@@ -711,6 +747,7 @@ body {
 
     .hero-image-placeholder {
         height: 400px;
+        max-width: 800px;
     }
 
     .problems-list {
