@@ -812,13 +812,20 @@ body {
         max-width: 800px;
     }
 
-    .problems-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .problems-container {
         flex-direction: row;
         align-items: flex-start;
+    }
+    
+    .mother-image-section {
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .problems-list {
+        grid-template-columns: repeat(2, 1fr);
+        flex: 1;
+        width: auto;
     }
 
     .mother-image-placeholder {
