@@ -413,11 +413,7 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-        // EmailJS初期化
-        emailjs.init('UgICN4t8c7S53-_6K');
-
         // FAQ のアコーディオン機能
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', function() {
@@ -454,17 +450,16 @@
             });
         });
 
-        // フォーム送信処理
+        // Google Forms送信処理
         document.querySelector('.submit-button').addEventListener('click', function(e) {
             e.preventDefault();
             
             // フォームデータを取得
             const form = document.querySelector('.form-grid');
-            const formData = new FormData();
             
             const parentName = form.querySelector('input[type="text"]').value;
             const childName = form.querySelectorAll('input[type="text"]')[1].value;
-            const childAge = form.querySelector('input[type="number"]').value;
+            const childBirthdate = form.querySelector('input[type="date"]').value;
             const email = form.querySelector('input[type="email"]').value;
             const phone = form.querySelector('input[type="tel"]').value;
             const preferredTime = form.querySelectorAll('input[type="text"]')[2].value;
@@ -480,34 +475,37 @@
             this.textContent = '送信中...';
             this.disabled = true;
             
-            // EmailJSでメール送信
-            const templateParams = {
-                parent_name: parentName,
-                child_name: childName,
-                child_age: childAge,
-                email: email,
-                phone: phone,
-                preferred_time: preferredTime,
-                message: message,
-                to_email: 'info@soroban.com'
-            };
+            // Google Formsに送信するデータを準備
+            const formData = new FormData();
             
-            emailjs.send('service_gmail', 'template_soroban', templateParams)
-                .then((response) => {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('お申し込みありがとうございます。\n内容を確認の上、後ほど担当者よりご連絡いたします。');
-                    
-                    // フォームをリセット
-                    form.reset();
-                }, (error) => {
-                    console.log('FAILED...', error);
-                    alert('送信に失敗しました。お手数ですが、お電話にてお問い合わせください。\nTEL: 03-5269-8181');
-                })
-                .finally(() => {
-                    // ボタンを元に戻す
-                    this.textContent = '無料体験を申し込む';
-                    this.disabled = false;
-                });
+            // 実際のGoogle FormsのfieldIDを使用
+            formData.append('entry.1182687665', parentName);      // 保護者名
+            formData.append('entry.1986894971', childName);       // お子様名
+            formData.append('entry.1246511428', childBirthdate);  // 生年月日
+            formData.append('entry.1490460240', email);           // メール
+            formData.append('entry.1435659298', phone);           // 電話番号
+            formData.append('entry.61486942', preferredTime);     // 希望日時
+            formData.append('entry.2081149595', message);         // 相談内容
+            
+            // Google Formsに送信
+            fetch('https://docs.google.com/forms/d/e/1FAIpQLSdmw62P_L7ttPtANdmBVH52cV79T2zk7WoeVViD0XRZY4oZNg/formResponse', {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            })
+            .then(() => {
+                alert('お申し込みありがとうございます。\n内容を確認の上、後ほど担当者よりご連絡いたします。');
+                form.reset();
+            })
+            .catch((error) => {
+                alert('送信に失敗しました。お手数ですが、お電話にてお問い合わせください。\nTEL: 03-5269-8181');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                // ボタンを元に戻す
+                this.textContent = '無料体験を申し込む';
+                this.disabled = false;
+            });
         });
     </script>
 </body>
