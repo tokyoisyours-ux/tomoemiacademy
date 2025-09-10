@@ -596,7 +596,7 @@ body {
 }
 
 .faq .container {
-    max-width: 800px;
+    max-width: 800px !important;
 }
 
 .faq-item {
