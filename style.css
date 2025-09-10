@@ -39,10 +39,6 @@ body {
 }
 
 /* ãƒ¢ãƒã‚¤ãƒ«æ™‚ã®æ"¹è¡Œåˆ¶å¾¡ */
-.mobile-break {
-    display: none;
-}
-
 @media (max-width: 480px) {
     .mobile-break::before {
         content: "\A";
