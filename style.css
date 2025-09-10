@@ -5,13 +5,13 @@
 }
 
 body {
-    font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', 'ヒラギノ明朝 Pro', 'MS PMincho', 'MS 明朝', serif;
+    font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', 'ãƒ'ãƒ©ã‚®ãƒŽæ˜Žæœ Pro', 'MS PMincho', 'MS æ˜Žæœ', serif;
     line-height: 1.6;
     color: #2c2c2c;
     background: #f8f9fa;
 }
 
-/* セクション共通 */
+/* ã‚»ã‚¯ã‚·ãƒ§ãƒ³å…±é€š */
 .section {
     padding: 50px 20px;
 }
@@ -38,7 +38,7 @@ body {
     font-weight: 600;
 }
 
-/* モバイル時の改行制御 */
+/* ãƒ¢ãƒã‚¤ãƒ«æ™‚ã®æ"¹è¡Œåˆ¶å¾¡ */
 .mobile-break {
     display: none;
 }
@@ -50,7 +50,7 @@ body {
     }
 }
 
-/* ヒーローセクション - 白背景 */
+/* ãƒ'ãƒ¼ãƒ­ãƒ¼ã‚»ã‚¯ã‚·ãƒ§ãƒ³ - ç™½èƒŒæ™¯ */
 .hero {
     background: #ffffff;
     padding: 60px 20px;
@@ -96,7 +96,7 @@ body {
     border-radius: 10px;
 }
 
-/* 悩みセクション - ライトグレー背景 */
+/* æ‚©ã¿ã‚»ã‚¯ã‚·ãƒ§ãƒ³ - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
 .problems {
     background: #f8f9fa;
 }
@@ -183,7 +183,7 @@ body {
     margin: 0;
 }
 
-/* モバイル用の吹き出し（上向き） */
+/* ãƒ¢ãƒã‚¤ãƒ«ç"¨ã®å¹ãå‡ºã—ï¼ˆä¸Šå'ãï¼‰ */
 @media (max-width: 767px) {
     .problem-item {
         margin-left: 0;
@@ -209,7 +209,7 @@ body {
     }
 }
 
-/* 解決提案セクション - 白背景 */
+/* è§£æ±ºææ¡ˆã‚»ã‚¯ã‚·ãƒ§ãƒ³ - ç™½èƒŒæ™¯ */
 .solution {
     background: #ffffff;
     color: #2c2c2c;
@@ -220,7 +220,7 @@ body {
     color: #1c1669;
 }
 
-/* 4つの強み - ライトグレー背景 */
+/* 4ã¤ã®å¼·ã¿ - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
 .strengths {
     background: #f8f9fa;
 }
@@ -287,7 +287,7 @@ body {
     border-radius: 10px;
 }
 
-/* CTA共通スタイル */
+/* CTAå…±é€šã‚¹ã‚¿ã‚¤ãƒ« */
 .cta-section {
     background: #ffffff;
     max-width: 700px;
@@ -372,7 +372,7 @@ body {
 }
 
 .sub-item::before {
-    content: "✓";
+    content: "âœ"";
     color: #fe891f;
     font-weight: bold;
     margin-right: 6px;
@@ -387,7 +387,7 @@ body {
     line-height: 1.6;
 }
 
-/* 歴史と信頼 - 白背景 */
+/* æ­´å²ã¨ä¿¡é ¼ - ç™½èƒŒæ™¯ */
 .history {
     background: #ffffff;
 }
@@ -446,9 +446,13 @@ body {
     position: relative;
 }
 
-/* 保護者の声 - ライトグレー背景 */
+/* ä¿è­·è€…ã®å£° - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
 .reviews {
     background: #f8f9fa;
+}
+
+.reviews .container {
+    max-width: 800px;
 }
 
 .review-item {
@@ -495,9 +499,13 @@ body {
     border-radius: 10px;
 }
 
-/* 授業料 - 白背景 */
+/* æŽˆæ¥­æ–™ - ç™½èƒŒæ™¯ */
 .pricing {
     background: #ffffff;
+}
+
+.pricing .container {
+    max-width: 800px;
 }
 
 .price-box {
@@ -590,7 +598,7 @@ body {
     font-size: 16px;
 }
 
-/* FAQ - ライトグレー背景 */
+/* FAQ - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
 .faq {
     background: #f8f9fa;
 }
@@ -649,7 +657,7 @@ body {
     max-height: 200px;
 }
 
-/* 教室案内 - 白背景 */
+/* æ•™å®¤æ¡ˆå†… - ç™½èƒŒæ™¯ */
 .classroom-info {
     background: #ffffff;
     text-align: center;
@@ -722,7 +730,7 @@ body {
     border-radius: 10px;
 }
 
-/* 申し込みフォーム - ライトグレー背景 */
+/* ç"³ã—è¾¼ã¿ãƒ•ã‚©ãƒ¼ãƒ  - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
 .contact-form {
     background: #f8f9fa;
 }
@@ -801,7 +809,7 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* レスポンシブデザイン */
+/* ãƒ¬ã‚¹ãƒãƒ³ã‚·ãƒ–ãƒ‡ã‚¶ã‚¤ãƒ³ */
 @media (min-width: 768px) {
     .main-catchcopy {
         font-size: 42px;
@@ -872,7 +880,7 @@ body {
     }
 }
 
-/* モバイル専用調整 */
+/* ãƒ¢ãƒã‚¤ãƒ«å°‚ç"¨èª¿æ•´ */
 @media (max-width: 480px) {
     .section {
         padding: 40px 15px;
