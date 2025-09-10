@@ -11,7 +11,7 @@ body {
     background: #f8f9fa;
 }
 
-/* ã‚»ã‚¯ã‚·ãƒ§ãƒ³å…±é€š */
+/* セクション共通 */
 .section {
     padding: 50px 20px;
 }
@@ -38,7 +38,7 @@ body {
     font-weight: 600;
 }
 
-/* ãƒ¢ãƒã‚¤ãƒ«æ™‚ã®æ"¹è¡Œåˆ¶å¾¡ */
+/* モバイル時の改行制御 */
 @media (max-width: 480px) {
     .mobile-break::before {
         content: "\A";
@@ -46,7 +46,7 @@ body {
     }
 }
 
-/* ãƒ'ãƒ¼ãƒ­ãƒ¼ã‚»ã‚¯ã‚·ãƒ§ãƒ³ - ç™½èƒŒæ™¯ */
+/* ヒーローセクション - 白背景 */
 .hero {
     background: #ffffff;
     padding: 60px 0px;
@@ -91,7 +91,7 @@ body {
     border-radius: 0px;
 }
 
-/* æ‚©ã¿ã‚»ã‚¯ã‚·ãƒ§ãƒ³ - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
+/* 悩みセクション - ライトグレー背景 */
 .problems {
     background: #f8f9fa;
 }
@@ -178,7 +178,7 @@ body {
     margin: 0;
 }
 
-/* ãƒ¢ãƒã‚¤ãƒ«ç"¨ã®å¹ãå‡ºã—ï¼ˆä¸Šå'ãï¼‰ */
+/* モバイル用の吹き出し（上向き） */
 @media (max-width: 767px) {
     .problem-item {
         margin-left: 0;
@@ -204,7 +204,7 @@ body {
     }
 }
 
-/* è§£æ±ºææ¡ˆã‚»ã‚¯ã‚·ãƒ§ãƒ³ - ç™½èƒŒæ™¯ */
+/* 解決提案セクション - 白背景 */
 .solution {
     background: #ffffff;
     color: #2c2c2c;
@@ -215,7 +215,7 @@ body {
     color: #1c1669;
 }
 
-/* 4ã¤ã®å¼·ã¿ - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
+/* 4つの強み - ライトグレー背景 */
 .strengths {
     background: #f8f9fa;
 }
@@ -282,7 +282,7 @@ body {
     border-radius: 10px;
 }
 
-/* CTAå…±é€šã‚¹ã‚¿ã‚¤ãƒ« */
+/* CTA共通スタイル */
 .cta-section {
     background: #ffffff;
     max-width: 700px;
@@ -367,7 +367,7 @@ body {
 }
 
 .sub-item::before {
-    content: "âœ"";
+    content: "✓";
     color: #fe891f;
     font-weight: bold;
     margin-right: 6px;
@@ -382,9 +382,13 @@ body {
     line-height: 1.6;
 }
 
-/* æ­´å²ã¨ä¿¡é ¼ - ç™½èƒŒæ™¯ */
+/* 歴史と信頼 - 白背景 */
 .history {
     background: #ffffff;
+}
+
+.history .container {
+    max-width: 900px;
 }
 
 .history-message {
@@ -441,7 +445,7 @@ body {
     position: relative;
 }
 
-/* ä¿è­·è€…ã®å£° - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
+/* 保護者の声 - ライトグレー背景 */
 .reviews {
     background: #f8f9fa;
 }
@@ -494,7 +498,7 @@ body {
     border-radius: 10px;
 }
 
-/* æŽˆæ¥­æ–™ - ç™½èƒŒæ™¯ */
+/* 授業料 - 白背景 */
 .pricing {
     background: #ffffff;
 }
@@ -593,7 +597,7 @@ body {
     font-size: 16px;
 }
 
-/* FAQ - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
+/* FAQ - ライトグレー背景 */
 .faq {
     background: #f8f9fa;
 }
@@ -652,7 +656,7 @@ body {
     max-height: 200px;
 }
 
-/* æ•™å®¤æ¡ˆå†… - ç™½èƒŒæ™¯ */
+/* 教室案内 - 白背景 */
 .classroom-info {
     background: #ffffff;
     text-align: center;
@@ -725,7 +729,7 @@ body {
     border-radius: 10px;
 }
 
-/* ç"³ã—è¾¼ã¿ãƒ•ã‚©ãƒ¼ãƒ  - ãƒ©ã‚¤ãƒˆã‚°ãƒ¬ãƒ¼èƒŒæ™¯ */
+/* 申し込みフォーム - ライトグレー背景 */
 .contact-form {
     background: #f8f9fa;
 }
@@ -804,7 +808,7 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* ãƒ¬ã‚¹ãƒãƒ³ã‚·ãƒ–ãƒ‡ã‚¶ã‚¤ãƒ³ */
+/* レスポンシブデザイン */
 @media (min-width: 768px) {
     .main-catchcopy {
         font-size: 42px;
@@ -875,10 +879,14 @@ body {
     }
 }
 
-/* ãƒ¢ãƒã‚¤ãƒ«å°‚ç"¨èª¿æ•´ */
+/* モバイル専用調整 */
 @media (max-width: 480px) {
     .section {
         padding: 40px 15px;
+    }
+    
+    .hero {
+        padding: 60px 0;
     }
     
     .problems-container {
@@ -908,7 +916,10 @@ body {
     }
     
     .hero-image-placeholder {
-        max-width: 100%;
-        margin: 20px auto 0px;
+        max-width: 100vw;
+        width: 100vw;
+        margin: 20px 0 40px 0;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
     }
 }
